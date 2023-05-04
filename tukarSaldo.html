@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>UpCycle</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='style7.css'>
+    </head>
+
+    <body>
+        <nav>
+            <a id="navLogo" href="bankSampah.html">
+                <img style="max-width: 100%; max-height: 50px;" src="./assets/upcycle-1.png"/>
+                <p style="color: black; font-weight: bolder; font-size: 20px; font-style: italic;">UpCycle</p>
+            </a>
+    
+            <div id="navMenu">
+                <a href="bankSampah.html">Home</a>
+                <a href="setorSampah.html">Re-Cycler</a>
+                <a href="challenge.html">Up-Challenge</a>
+                <a href="trashLocation.html" id="activeMenu">Up-Guard</a>
+            </div>
+    
+            <div>
+                <a href="#"><img style="max-width: 100%; max-height: 40px;" src="./assets/avatar-bg.png" alt="profile"></a>
+            </div>
+        </nav>
+
+        <!-- ========================================================================================================================================== -->
+
+        <div class="ts-bagian1">
+            <img src="./assets/Frame 2050.png" alt="Setor Sampah" width="600px">
+
+            <div>
+                <div style="margin: 0;">
+                    <p style="margin: 0; font-size: 38px; font-weight: bold; font-style: italic;">UpWallet</p>
+                    <p style="margin-top: 10px; margin-bottom: 40px; font-size: 18px; width: 500px; text-align: center;">Tukarkan Saldo UpWallet Mu Menjadi Uang!</p>
+                </div>
+
+                <div class="form">
+                    <select name="Jenis Pencairan" >
+                        <option disabled selected>Pilih Metode Pencairan</option>
+                        <option value="gopay">GoPay</option>
+                        <option value="shopeepay">ShopeePay</option>
+                        <option value="ovo">OVO</option>
+                        <option value="dana">Dana</option>
+                        <option value="linkaja">LinkAja</option>
+                        <option value="bca">Bank BCA</option>
+                        <option value="bri">Bank BRI</option>
+                        <option value="bni">Bank BNI</option>
+                        <option value="bsi">Bank BSI</option>
+                        <option value="btn">Bank BTN</option>
+                        <option value="mandiri">Bank Mandiri</option>
+                    </select>
+                    
+                    <input type="text" placeholder="Masukkan Nomor E-Wallet / Rekening Anda">
+
+                    <div style="display: flex; flex-direction: column;">
+                        <input type="text" placeholder="Masukkan Jumlah Saldo Yang Ingin Dicairkan">
+                        <div style="color: white; padding-top: 10px;">*Minimum Saldo Dicairkan Rp. 50.000,-</div>
+                    </div>
+
+                    <button class="tukarSaldo" onclick="alert('Muncul PopUp Transaksi On Process')" type="submit">Tukar Saldo</button>
+                </div>           
+            </div>
+        </div>
+
+        <!-- ========================================================================================================================================== -->
+
+        <footer>
+            <div>&copy; 2023 | Upcycle. - Kampus Merdeka x Skilvul #Tech4Impact</div>
+        </footer>
+    </body>
+</html>
