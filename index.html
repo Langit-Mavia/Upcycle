@@ -37,10 +37,10 @@
                             <a href="#animate" class="nav__link"><i>UpCycle.</i> Animate</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link">Register</a>
+                            <button class="nav__link button__login" onclick="showPopup('loginPopup')">Login</button>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link">Login</a>
+                            <button class="nav__link button__register" onclick="showPopup('registerPopup')">Register</button>
                         </li>
                     </ul>
 
@@ -57,6 +57,43 @@
                     <i class="ri-function-line"></i>
                 </div>
             </nav>
+
+            <!-- Login Popup -->
+            <div class="popup" id="loginPopup">
+                <div class="form__content">
+                    <h2 class="popup__title">Login</h2>
+                    <p class="popup__subtitle">Hey, Selamat Datang Kembali di <i>Upcycle</i> !</p>
+
+                    <form action="#" class="popup__form">
+                        <input type="email" placeholder="Email" class="popup__input">
+                        <input type="password" placeholder="Password" class="popup__input">
+                        <button class="button__form" type="button" id="login-btn">Login</button>
+                    </form>
+                    <div class="wronglogin"></div>
+                    <button class="popup__close" onclick="closePopup()"></button>
+                </div>
+            </div>
+            
+            <!-- Register Popup -->
+            <div class="popup" id="registerPopup">
+                <div class="form__content">
+                    <h2 class="popup__title">Register</h2>
+                    <p class="popup__subtitle">Join us today to start upcycling!</p>
+                    <form class="popup__form">
+                        <input type="text" name="name" placeholder="Name" class="popup__input">
+                        <input type="email" name="email" placeholder="Email" class="popup__input">
+                        <input type="password" name="password" placeholder="Password" class="popup__input">
+                        <input type="password" name="confirmpassword" placeholder="Confirm Password" class="popup__input">
+                        <label for="gender">Jenis Kelamin</label>
+                        <select name="gender" id="gender-input" class="popup__input">
+                            <option value="male">Laki-laki</option>
+                            <option value="female">Perempuan</option>
+                        </select>
+                        <button type="button" class="button__form" onclick="register()">Register</button>
+                    </form>
+                    <button class="popup__close" onclick="closePopup()"></button>
+                </div>
+            </div>
         </header>
 
         <main class="main">
@@ -74,7 +111,7 @@
             <div class="home__container container grid">
                 <div class="home__data">
                     <h1 class="home__data-title">Jangan <b>Ragu</b> <br> Mulai <b>Perubahan!</b></h1>
-                    <a href="#" class="button">Daftar Sekarang</a>
+                    <a href="#" class="button" onclick="showPopup('registerPopup')">Daftar Sekarang</a>
 
                 </div>
 
@@ -97,13 +134,10 @@
             <div class="about__container container grid">
                 <div class="about__data">
                     <h2 class="section__title about__title">Apa itu <i>Upcycle.</i></h2>
-                    <p class="about__description">Sebagai perusahaan bank sampah kekinian, <i>UpCycle.</i> memiliki misi
-                        untuk memperbaiki lingkungan dengan mengajak masyarakat
-                        untuk mengoptimalkan potensi sampah dan membantu mengurangi dampak negatif sampah terhadap
-                        lingkungan. Dengan
-                        mengoptimalkan Bank Sampah, UpCycle. Berusaha memberikan pengetahuan pengolahan kembali sampah
-                        yang dapat di daur ulang
-                        menjadi bahan yang berguna bagi masyarakat.
+                    <p class="about__description">Sebagai mitra yang menyediakan jasa bank sampah kekinian, <i>UpCycle.</i> memiliki misi untuk memperbaiki lingkungan
+                    dengan mengajak masyarakatuntuk mengoptimalkan potensi sampah dan membantu mengurangi dampak negatif sampah terhadap
+                    lingkungan. Dengan mengoptimalkan Bank Sampah, UpCycle. Berusaha memberikan pengetahuan pengolahan kembali sampah yang
+                    dapat di daur ulang menjadi bahan yang berguna bagi masyarakat.
                     </p>
                 </div>
 
@@ -121,8 +155,8 @@
 
         <!--==================== DISCOVER ====================-->
         <section class="discover section" id="discover">
-            <h2 class="section__title">discover the Most <br> Interesting Upcycling Items</h2>
-            <p class="section__subtitle">Swipe rigth or left to see more</p>
+            <h2 class="section__title">Jelajahi Benda-benda<br>Hasil Upcycling Terbaik Kami </h2>
+            <p class="section__subtitle">Geser ke kiri atau ke kanan untuk lihat lebih banyak</p>
 
             <div class="discover__container container swiper-container">
                 <div class="swiper-wrapper">
@@ -172,11 +206,12 @@
 
         <!--==================== EXPERIENCE ====================-->
         <section class="animate section" id="animate">
-            <h2 class="section__title">With Our Experience <br> We Will Serve You</h2>
+            <h2 class="section__title">Kami Akan Melayani Anda <br> Dengan Sebuah Pengalaman</h2>
+            <p class="section__subtitle">Tekan Gambar Untuk Melihat DIY Tutorial</p>
 
             <div class="animate__section">
                 <div class="card-grid">
-                    <a class="animate__card" href="#">
+                    <a class="animate__card" data-video="https://www.youtube.com/embed/xyzpFiaHdBY">
                         <div class="card__background" style="background-image: url(assets/img/animate1.jpg)">
                         </div>
                         <div class="card__content">
@@ -184,7 +219,7 @@
                             <h3 class="card__heading">Wall Flowerpot</h3>
                         </div>
                     </a>
-                    <a class="animate__card" href="#">
+                    <a class="animate__card" data-video="https://www.youtube.com/embed/2yCp0uIYqQo">
                         <div class="card__background" style="background-image: url(assets/img/animate2.jpg)">
                         </div>
                         <div class="card__content">
@@ -192,7 +227,7 @@
                             <h3 class="card__heading">Cabinet</h3>
                         </div>
                     </a>
-                    <a class="animate__card" href="#">
+                    <a class="animate__card" data-video="https://www.youtube.com/embed/ct9GS_KvkLk">
                         <div class="card__background" style="background-image: url(assets/img/animate3.jpg)">
                         </div>
                         <div class="card__content">
@@ -200,7 +235,7 @@
                             <h3 class="card__heading">Stool</h3>
                         </div>
                         </li>
-                        <a class="animate__card" href="#">
+                        <a class="animate__card" data-video="https://www.youtube.com/embed/Ap8BjkbypHM">
                             <div class="card__background" style="background-image: url(assets/img/animate4.jpg)">
                             </div>
                             <div class="card__content">
@@ -208,7 +243,7 @@
                                 <h3 class="card__heading">Box</h3>
                             </div>
                         </a>
-                        <a class="animate__card" href="#">
+                        <a class="animate__card" data-video="https://www.youtube.com/embed/30p_AmHkdv8">
                             <div class="card__background" style="background-image: url(assets/img/animate5.jpg)">
                             </div>
                             <div class="card__content">
@@ -216,7 +251,7 @@
                                 <h3 class="card__heading">Pencil Bag</h3>
                             </div>
                         </a>
-                        <a class="animate__card" href="#">
+                        <a class="animate__card" data-video="https://www.youtube.com/embed/1QdNaC1MUZM">
                             <div class="card__background" style="background-image: url(assets/img/animate6.jpg)">
                             </div>
                             <div class="card__content">
@@ -224,7 +259,7 @@
                                 <h3 class="card__heading">Post Box</h3>
                             </div>
                         </a>
-                        <a class="animate__card" href="#">
+                        <a class="animate__card" data-video="https://www.youtube.com/embed/eB5Xo51sjxk">
                             <div class="card__background" style="background-image: url(assets/img/animate7.jpg)">
                             </div>
                             <div class="card__content">
@@ -232,25 +267,31 @@
                                 <h3 class="card__heading">Table Flowerpot</h3>
                             </div>
                             </li>
-                            <a class="animate__card" href="#">
-                                <div class="card__background" style="background-image: url(assets/img/animate8.png)">
-                                </div>
-                                <div class="card__content">
-                                    <p class="card__subtitles">Let's DIY</p>
-                                    <h3 class="card__heading">Furnace</h3>
-                                </div>
-                            </a>
-                            <div>
-                            </div>
+                        <a class="animate__card" data-video="https://www.youtube.com/embed/0bfkXPdD0-s">
+                         <div class="card__background" style="background-image: url(assets/img/animate8.png)">
+                        </div>
+                            <div class="card__content">
+                             <p class="card__subtitles">Let's DIY</p>
+                            <h3 class="card__heading">Furnace</h3>
+                         </div>
+                    </a>
+                <div>
+            </div>
         </section>
+
+        <div class="popup">
+            <div class="popup__content">
+                <iframe id="videoFrame" width="713" height="401" src="" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                <button class="popup__close" onclick="closePopup()">Close</button>
+            </div>
+        </div>
 
         <!--==================== VIDEO ====================-->
         <section class="video section">
             <h2 class="section__title">Video Tour</h2>
 
             <div class="video__container container">
-                <p class="video__description">Find out more with our video of the most beautiful and
-                    pleasant places for you and your family.
+                <p class="video__description">Tekan Tombol Play Untuk Melihat Keindahan Hutan Yang Tidak Tercemar
                 </p>
 
                 <div class="video__content">
@@ -278,53 +319,7 @@
                 <div class="sponsor__content">
                     <img src="assets/img/sponsors3.png" alt="" class="sponsor__img">
                 </div>
-                <div class="sponsor__content">
-                    <img src="assets/img/sponsors4.png" alt="" class="sponsor__img">
-                </div>
-            </div>
-        </section>
-
-        <!--==================== CONTACT FORM ====================-->
-        <section class="contact-form" id="contact">
-            <div class="contact-box">
-
-                <div class="contact-title">
-                    <div>
-                        <h2>Hubungi Kami</h2>
-                        <p>Let's get in touch!</p>
-                    </div>
-                </div>
-
-                <form id="myForm">
-                    <div class="name">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" />
-                    </div>
-
-                    <div class="city">
-                        <label for="city">City</label>
-                        <input type="text" id="city" />
-                    </div>
-
-                    <div class="email">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" />
-                    </div>
-
-                    <div class="zipCode">
-                        <label for="zipCode">Zip Code</label>
-                        <input type="number" id="zip-code" />
-                    </div>
-
-                    <div class="check">
-                        <input type="checkbox" id="status" />
-                        <label for="name" id="check">Dengan ini saya menyatakan data yang diisi pada form ini adalah
-                            benar dan telah sesuai</label>
-                    </div>
-
-                    <button id="submit-form" type="submit" onsubmit="submit()">Submit</button>
-                    <div id="warning"></div>
-                </form>
+                <img src="assets/img/logo.png" class="footer__img">
             </div>
         </section>
     </main>
@@ -375,7 +370,7 @@
                             <a href="" class="footer__link"><i>UpCycle.</i> Team</a>
                         </li>
                         <li class="footer__item">
-                            <a href="" class="footer__link">Become a member</a>
+                            <a href="#" onclick="register()" class="footer__link">Become a member</a>
                         </li>
                     </ul>
                 </div>
@@ -416,11 +411,10 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <!--=============== SWIPER JS ===============-->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9.1.1/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/scrollactive.js"></script>
 </body>
 
 </html>
