@@ -1,125 +1,342 @@
-<html>
-    <head>
-        <meta charset='utf-8'>
-        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-        <title>UpCycle</title>
-        <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <link rel='stylesheet' type='text/css' media='screen' href='style2.css'>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
 
-    <body>
-        <nav>
-            <a id="navLogo" href="bankSampah.html">
-                <img style="max-width: 100%; max-height: 50px;" src="./assets/upcycle-1.png"/>
-                <p style="color: black; font-weight: bolder; font-size: 20px; font-style: italic;">UpCycle</p>
-            </a>
-    
-            <div id="navMenu">
-                <a href="bankSampah.html">Home</a>
-                <a href="setorSampah.html" id="activeMenu">Re-Cycler</a>
-                <a href="challenge.html">Up-Challenge</a>
-                <a href="trashLocation.html">Up-Guard</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="assets/img/favicon-online.png" type="image/png">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>UpCycle.</title>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo"><i>Upcycle.</i></a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="bankSampah.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="setorSampah.html" class="nav__link active-link">Re-Cycler</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="trashLocation.html" class="nav__link"><i>Up-Guard</i></a>
+                    </li>
+                    <li class="nav__item dropdown">
+                        <a href="#" class="nav__link">
+                            <span id="user-name">Account</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="profile.html" class="droplink">Profile</a>
+                            </li>
+                            <li>
+                                <a href="#" class="droplink" onclick="signOut()">Sign Out</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                </ul>
+
+                <div class="nav__dark">
+                    <!-- Theme change button -->
+                    <span class="change-theme-name">Dark mode</span>
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+                </div>
+
+                <i class="ri-close-line nav__close" id="nav-close"></i>
             </div>
-    
-            <div>
-                <a href="#"><img style="max-width: 100%; max-height: 40px;" src="./assets/avatar-bg.png" alt="profile"></a>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-function-line"></i>
             </div>
         </nav>
+    </header>
 
-        <!-- ========================================================================================================================================== -->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="home__vidcontainer">
+                <img src="./assets/img/Frame 2012.png" alt="" class="home__vid">
+                <div class="home__overlay"></div>
+            </div>
 
-        <div class="ss-bagian1">
-            <img src="./assets/Large Image.png" alt="Setor Sampah" width="600px" style="margin-left: -50px;">
-
-            <div>
-                <div style="margin: 0;">
-                    <p style="margin: 0; font-size: 38px; font-weight: bold; font-style: italic;">Re-Cycler</p>
-                    <p style="margin-top: 10px; margin-bottom: 40px; font-size: 18px; width: 500px; text-align: center;">Selamat datang di sistem Re-Cycler, Pengguna. Silahkan Masukkan data sesuai kebutuhan kamu!</p>
-                </div>
-
-                <div class="form">
-                    <select name="Jenis Sampah" >
-                        <option disabled selected>Masukkan Jenis Sampah</option>
-                        <option value="daurUlang">Sampah Daur Ulang</option>
-                        <option value="dapur">Sampah Dapur</option>
-                        <option value="barangBekas">Sampah Barang Bekas</option>
-                        <option value="furniture">Sampah Furniture</option>
-                        <option value="puing">Sampah Puing</option>
-                        <option value="alam">Sampah Alam</option>
-                    </select>
+                    <div class="ss-bagian1">
+                        <img src="./assets/img/Large Image.png" alt="Setor Sampah" width="600px" style="margin-left: -50px;">
                     
-                    <input type="text" placeholder="Sampah Apa Yang Mau Disetor?">
+                        <div>
+                            <div style="margin: 0;">
+                                <p class="form-title">Re-Cycler</p>
+                                <p class="form-subtitle">Selamat
+                                    datang di sistem Re-Cycler, Pengguna. Silahkan Masukkan data sesuai kebutuhan kamu!</p>
+                            </div>
+                    
+                            <div class="form">
+                                <select name="Jenis Sampah">
+                                    <option disabled selected>Masukkan Jenis Sampah</option>
+                                    <option value="daurUlang">Sampah Daur Ulang</option>
+                                    <option value="dapur">Sampah Dapur</option>
+                                    <option value="barangBekas">Sampah Barang Bekas</option>
+                                    <option value="furniture">Sampah Furniture</option>
+                                    <option value="puing">Sampah Puing</option>
+                                    <option value="alam">Sampah Alam</option>
+                                </select>
+                    
+                                <input type="text" placeholder="Sampah Apa Yang Mau Disetor?">
+                    
+                                <select name="Metode Setor Sampah">
+                                    <option disabled selected>Masukkan Metode Setor Sampah</option>
+                                    <option value="jemput">Pick Up By Courrier</option>
+                                    <option value="setor">Drop To Drop Point</option>
+                                </select>
+                    
+                                <button class="buttonSetorSampah" type="submit">Setor</button>
+                            </div>
+                        </div>
+                    </div>
 
-                    <select name="Metode Setor Sampah">
-                        <option disabled selected>Masukkan Metode Setor Sampah</option>
-                        <option value="jemput">Pick Up By Courrier</option>
-                        <option value="setor">Drop To Drop Point</option>
-                    </select>
+        </section>
 
-                    <button class="buttonSetorSampah" type="submit">Setor</button>
-                </div>           
+        <!--==================== ABOUT SAMPAH ====================-->
+        <section class="sampah section" id="sampah">
+            <div class="sampah__container container">
+                <div class="sampah__data">
+                    <h1 class="section__title sampah__title center">Mari Mengenal Jenis-Jenis Sampah</h1>
+                    <div class="baris">
+                        <div class="card">
+                            <img src="./assets/img/image-16.png" alt="Sampah Daur Ulang"
+                                style="margin-top: 40px; width: auto; height: 160px;" />
+                            <div class="info-container">
+                                <div class="card__title"><b>Sampah Daur Ulang</b></div>
+                                <p class="card__description">Sampah daur ulang dapat dibagi menjadi kertas, plastik,
+                                    logam,
+                                    kaca, dan tekstil yang dapat diproses
+                                    kembali menjadi bahan baku baru.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./assets/img/pngtreegarbage-can-with-waste-vector7346990-1.png"
+                                alt="Sampah Daur Ulang" style="padding: 0 0; height: 200px;" />
+                            <div class="info-container">
+                                <div class="card__title"><b>Sampah Dapur</b></div>
+                                <p class="card__description">Sampah dapur adalah jenis sampah organik yang berasal dari
+                                    sisa
+                                    makanan, sayuran, buah-buahan, dan
+                                    bahan
+                                    makanan lainnya yang dapat terurai secara alami melalui proses kompos.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./assets/img/image-17.png" alt="Sampah Daur Ulang"
+                                style="margin-top: 20px; height: 180px;" />
+                            <div class="info-container">
+                                <div class="card__title"><b>Sampah Barang Bekas</b></div>
+                                <p class="card__description">Sampah barang bekas adalah jenis sampah non-organik berupa
+                                    barang-barang elektronik, perlengkapakan
+                                    rumah
+                                    tangga, dan lainnya.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="baris">
+                        <div class="card">
+                            <img src="./assets/img/image-18.png" alt="Sampah Daur Ulang"
+                                style="margin-top: 40px; width: auto; height: 160px;" />
+                            <div class="info-container">
+                                <div class="card__title"><b>Sampah Furniture</b></div>
+                                <p class="card__description">Sampah furniture adalah jenis sampah yang meliputi
+                                    barang-barang
+                                    seperti meja, kursi, lemari, dan
+                                    perabotan rumah tangga lainnya namun sudah rusak atau tidak terpakai.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./assets/img/Group 127.png" alt="Sampah Daur Ulang"
+                                style="padding: 50px 0; max-width: 200px; max-height: 200px;" />
+                            <div class="info-container">
+                                <div class="card__title"><b>Sampah Puing</b></div>
+                                <p class="card__description">Sampah Puing adalah jenis sampah yang terdiri dari
+                                    sisa-sisa
+                                    bangunan atau konstruksi yang rusak atau
+                                    dirobohkan atau pengerukan.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./assets/img/image-19.png" alt="Sampah Daur Ulang"
+                                style="margin-top: 20px; height: 180px;" />
+                            <div class="info-container">
+                                <div class="card__title"><b>Sampah Alam</b></div>
+                                <p class="card__description">Sampah alam adalah jenis sampah yang berasal dari
+                                    bahan-bahan
+                                    organik yang
+                                    terurai secara alami, seperti
+                                    daun, ranting, atau sisa-sisa tumbuhan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <!-- ========================================================================================================================================== -->
+
+        <!--==================== VIDEO ====================-->
+        <section class="video section">
+
+            <h2 class="section__title">Video Edukatif</h2>
+
+            <div class="video__container container">
+                <p class="video__description">Tekan Tombol Play Untuk Melihat Alasan Mengapa Kita Harus Memilah Sampah
+                </p>
+
+                <div class="video__content">
+                    <video id="video-file">
+                        <source src="assets/vid/Pilah Sampah dari Rumah Yuk!.mp4" type="video/mp4">
+                    </video>
+
+                    <button class="button button--flex video__button" id="video-button">
+                        <i class="ri-play-line video__button-icon" id="video-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== PEYAKINAN ====================-->
+        <section class="yakin section" id="peyakinan">
+            <div class="yakinbg"></div>
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h1 class="yakin__data-title center">Masih Ragu Untuk Menggunakan <b>Re-Cycler?</b></h1>
+                    <h3 class="yakin__data-subtitle">Dengan fitur Bank Sampah kekinian ini, kamu bisa berkontribusi dalam
+                        menjaga lingkungan sekaligus mendapatkan manfaat
+                        finansial. Mulailah beraksi untuk masa depan yang lebih baik bersama Re-Cycler!, Yakin masih Ragu?</h3>
+                    <a href="#" class="button-center">Setor Sampahmu</a>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== SPONSORS ====================-->
+        <section class="sponsor section">
+            <div class="sponsor__container container grid">
+                <div class="sponsor__content">
+                    <img src="assets/img/sponsors1.png" alt="" class="sponsor__img">
+                </div>
+                <div class="sponsor__content">
+                    <img src="assets/img/sponsors2.png" alt="" class="sponsor__img">
+                </div>
+                <div class="sponsor__content">
+                    <img src="assets/img/sponsors3.png" alt="" class="sponsor__img">
+                </div>
+                <img src="assets/img/logo.png" class="footer__img">
+            </div>
+        </section>
+        </main>
         
-        <div class="bagian2">
-            <div style="font-size: xx-large; font-weight: 500;">Ketahui Jenis-Jenis Sampah!</div>
-            <p style="width: 800px; font-size: 20px; text-align: center;">Sampah adalah masalah global yang semakin mendesak untuk diatasi. Oleh karena itu, mari kita tingkatkan kesadaran tentang jenis-jenis sampah dan bagaimana cara mengelolanya dengan benar. Yuk, mari kita cari tahu bersama-sama tentang jenis-jenis sampah dan mulai berkontribusi untuk menjaga lingkungan yang lebih bersih dan sehat!</p>
-        </div>
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content grid">
+                    <div class="footer__data">
+                        <h3 class="footer__title"><i>UpCycle.</i></h3>
+                        <p class="footer__description">Jangan <b>Ragu</b> <br> Mulai <b>Perubahan!</b>
+                        </p>
+                        <div>
+                            <a href="https://www.facebook.com/" target="_blank" class="footer__social">
+                                <i class="ri-facebook-box-fill"></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" class="footer__social">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" class="footer__social">
+                                <i class="ri-instagram-fill"></i>
+                            </a>
+                            <a href="https://www.youtube.com/" target="_blank" class="footer__social">
+                                <i class="ri-youtube-fill"></i>
+                            </a>
+                        </div>
+                    </div>
         
-        <div class="baris">
-            <div class="card">
-                <img src="./assets/image-16.png" alt="Sampah Daur Ulang" style="margin-top: 40px; width: auto; height: 160px;"/>
-                <div class="container">
-                    <div><b>SAMPAH DAUR ULANG</b></div>
-                    <p>Sampah daur ulang dapat dibagi menjadi kertas, plastik, logam, kaca, dan tekstil yang dapat diproses kembali menjadi bahan baku baru.</p>
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">About</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="#about" class="footer__link">About</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#discover" class="footer__link"><i>UpCycle.</i> Craft</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#animate" class="footer__link"><i>UpCycle.</i> Animate</a>
+                            </li>
+                        </ul>
+                    </div>
+        
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">Company</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="" class="footer__link"><i>UpCycle.</i> Team</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Become a member</a>
+                            </li>
+                        </ul>
+                    </div>
+        
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">Support</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">FAQs</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Support Center</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <div class="footer__rights">
+                    <p class="footer__copy">&#169; 2023 <i>UpCycle. This Page is a submission for <a
+                                href="https://skilvul.com">Skilvul</a> Assignment Project</i></p>
+                    <div class="footer__terms">
+                        <a href="#" class="footer__terms-link">Terms & Agreements</a>
+                        <a href="#" class="footer__terms-link">Privacy Policy</a>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="./assets/pngtreegarbage-can-with-waste-vector7346990-1.png" alt="Sampah Daur Ulang" style="padding: 0 0; height: 200px;"/>
-                <div class="container">
-                    <div><b>SAMPAH DAPUR</b></div>
-                    <p>Sampah dapur adalah jenis sampah organik yang berasal dari sisa makanan, sayuran, buah-buahan, dan bahan makanan lainnya yang dapat terurai secara alami melalui proses kompos.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./assets/image-17.png" alt="Sampah Daur Ulang" style="margin-top: 20px; height: 180px;"/>
-                <div class="container">
-                    <div><b>SAMPAH BARANG BEKAS</b></div>
-                    <p>Sampah barang bekas adalah jenis sampah non-organik berupa barang-barang elektronik, perlengkapakan rumah tangga, dan lainnya.</p>
-                </div>
-            </div>
-        </div>
-    
-        <div class="baris">
-            <div class="card">
-                <img src="./assets/image-18.png" alt="Sampah Daur Ulang" style="margin-top: 40px; width: auto; height: 160px;"/>
-                <div class="container">
-                    <div><b>SAMPAH FURNITURE</b></div>
-                    <p>Sampah furniture adalah jenis sampah yang meliputi barang-barang seperti meja, kursi, lemari, dan perabotan rumah tangga lainnya namun sudah rusak atau tidak terpakai.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./assets/Group 127.png" alt="Sampah Daur Ulang" style="padding: 50px 0; max-width: 200px; max-height: 200px;"/>
-                <div class="container">
-                    <div><b>SAMPAH PUING</b></div>
-                    <p>Sampah Puing adalah jenis sampah yang terdiri dari sisa-sisa bangunan atau konstruksi yang rusak atau dirobohkan atau pengerukan.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./assets/image-19.png" alt="Sampah Daur Ulang" style="margin-top: 20px; height: 180px;"/>
-                <div class="container">
-                    <div><b>SAMPAH ALAM</b></div>
-                    <p>Sampah alam adalah jenis sampah yang berasal dari bahan-bahan organik yang terurai secara alami, seperti daun, ranting, atau sisa-sisa tumbuhan.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- ========================================================================================================================================== -->
-
-        <footer>
-            <div>&copy; 2023 | Upcycle. - Kampus Merdeka x Skilvul #Tech4Impact</div>
         </footer>
-    </body>
+        
+        <!--========== SCROLL UP ==========-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-line scrollup__icon"></i>
+        </a>
+        
+        <!--=============== SCROLL REVEAL===============-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+        </body>
+        
 </html>
