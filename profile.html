@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="assets/img/favicon-online.png" type="image/png">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>UpCycle.</title>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo"><i>Upcycle.</i></a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="bankSampah.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="setorSampah.html" class="nav__link active-link">Re-Cycler</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="trashLocation.html" class="nav__link"><i>Up-Guard</i></a>
+                    </li>
+                    <li class="nav__item dropdown">
+                        <a href="#" class="nav__link">
+                            <span id="user-name">Account</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#" class="droplink">Profile</a>
+                            </li>
+                            <li>
+                                <a href="#" class="droplink" onclick="signOut()">Sign Out</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                </ul>
+
+                <div class="nav__dark">
+                    <!-- Theme change button -->
+                    <span class="change-theme-name">Dark mode</span>
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+                </div>
+
+                <i class="ri-close-line nav__close" id="nav-close"></i>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-function-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!--==================== PROFILE ====================-->
+        <section class="profile__profile">
+            <div class="profile__container">
+                <div class="profile__card profile__card-left">
+                    <img src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1.jpg" alt="Foto profil" class="profile__img">
+                </div>
+
+                <div class="profile__card profile__card-right profile__card-big">
+                    <h2 class="center">Update Profile</h2>
+                    <form id="updatedata__form">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                        <label for="password">Password:</label>
+                        <input type="password" class="password" name="password">
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" class="confirm-password" name="confirm-password">
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender">
+                            <option value="male">Laki-laki</option>
+                            <option value="female">Perempuan</option>
+                        </select>
+                        <button id="save-btn" onclick="updatedata(event)">Save</button>
+                    </form>
+                </div>
+
+                <div class="profile__card">
+                    <button class="profile__button" onclick="location.href='upwallet.html'">UpWallet.</button>
+                    
+                    <button class="profile__button" onclick="location.href='upchallenge.html'">UpChallenge</button>
+                    <button class="profile__button button1" onclick="signOut()">Sign Out</button>
+                </div>
+            </div>
+            <div class="maps__overlay"></div>
+        </section>
+
+
+        <!--==================== VIDEO ====================-->
+        <section class="video section">
+
+            <h2 class="section__title none">Video Edukatif</h2>
+
+            <div class="video__container container none">
+                <p class="video__description none">Tekan Tombol Play Untuk Melihat Alasan Mengapa Kita Harus Memilah Sampah
+                </p>
+
+                <div class="video__content none">
+                    <video id="video-file none">
+                        <source src="assets/vid/Pilah Sampah dari Rumah Yuk!.mp4" type="video/mp4">
+                    </video>
+
+                    <button class="button button--flex video__button none" id="video-button">
+                        <i class="ri-play-line video__button-icon" id="video-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== PEYAKINAN ====================-->
+        <section class="yakin section" id="peyakinan">
+            <div class="yakinbg"></div>
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h1 class="yakin__data-title center">Masih Ragu Untuk Menggunakan <b>Re-Cycler?</b></h1>
+                    <h3 class="yakin__data-subtitle">Dengan fitur Bank Sampah kekinian ini, kamu bisa berkontribusi
+                        dalam
+                        menjaga lingkungan sekaligus mendapatkan manfaat
+                        finansial. Mulailah beraksi untuk masa depan yang lebih baik bersama Re-Cycler!, Yakin masih
+                        Ragu?</h3>
+                    <a href="#" class="button-center">Setor Sampahmu</a>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== SPONSORS ====================-->
+        <section class="sponsor section">
+            <div class="sponsor__container container grid">
+                <div class="sponsor__content">
+                    <img src="assets/img/sponsors1.png" alt="" class="sponsor__img">
+                </div>
+                <div class="sponsor__content">
+                    <img src="assets/img/sponsors2.png" alt="" class="sponsor__img">
+                </div>
+                <div class="sponsor__content">
+                    <img src="assets/img/sponsors3.png" alt="" class="sponsor__img">
+                </div>
+                <img src="assets/img/logo.png" class="footer__img">
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div class="footer__content grid">
+                <div class="footer__data">
+                    <h3 class="footer__title"><i>UpCycle.</i></h3>
+                    <p class="footer__description">Jangan <b>Ragu</b> <br> Mulai <b>Perubahan!</b>
+                    </p>
+                    <div>
+                        <a href="https://www.facebook.com/" target="_blank" class="footer__social">
+                            <i class="ri-facebook-box-fill"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="footer__social">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="footer__social">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="https://www.youtube.com/" target="_blank" class="footer__social">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">About</h3>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="#about" class="footer__link">About</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#discover" class="footer__link"><i>UpCycle.</i> Craft</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#animate" class="footer__link"><i>UpCycle.</i> Animate</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">Company</h3>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="" class="footer__link"><i>UpCycle.</i> Team</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">Become a member</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">Support</h3>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">FAQs</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">Support Center</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__rights">
+                <p class="footer__copy">&#169; 2023 <i>UpCycle. This Page is a submission for <a
+                            href="https://skilvul.com">Skilvul</a> Assignment Project</i></p>
+                <div class="footer__terms">
+                    <a href="#" class="footer__terms-link">Terms & Agreements</a>
+                    <a href="#" class="footer__terms-link">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line scrollup__icon"></i>
+    </a>
+
+    <!--=============== SCROLL REVEAL===============-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        var data = localStorage.getItem("users");
+        var parsedData = JSON.parse(data);
+        var name = parsedData[0].name;
+        var email = parsedData[0].email;
+        var gender = parsedData[0]["gender"];
+        document.getElementById("name").value = name;
+        document.getElementById("email").value = email;
+        if (gender === "male") {
+            document.getElementById("gender").value = "male";
+        } else {
+            document.getElementById("gender").value = "female";
+        }
+
+        var userdata = JSON.parse(localStorage.getItem("users"));
+
+    </script>
+</body>
+
+</html>

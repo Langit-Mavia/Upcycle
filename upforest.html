@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="assets/img/favicon-online.png" type="image/png">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>UpCycle.</title>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo"><i>Upcycle.</i></a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="bankSampah.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="setorSampah.html" class="nav__link">Re-Cycler</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="trashLocation.html" class="nav__link active-link"><i>Up-Guard</i></a>
+                    </li>
+                    <li class="nav__item dropdown">
+                        <a href="#" class="nav__link">
+                            <span id="user-name">Account</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="profile.html" class="droplink">Profile</a>
+                            </li>
+                            <li>
+                                <a href="#" class="droplink" onclick="signOut()">Sign Out</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                </ul>
+
+                <div class="nav__dark">
+                    <!-- Theme change button -->
+                    <span class="change-theme-name">Dark mode</span>
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+                </div>
+
+                <i class="ri-close-line nav__close" id="nav-close"></i>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-function-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="gmaps section">
+            <div class="home__vidcontainer">
+                <iframe id="maps"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d247084.59035402557!2d101.5423038713239!3d0.30898380834220124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sid!2sid!4v1683006631220!5m2!1sid!2sid"
+                    width="1536" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"class="home__maps"></iframe>
+                <div class="maps__overlay"></div>
+            </div>
+        </section>
+
+        <!--==================== UpGuard. Bin ====================-->
+        <section class="about section" id="about">
+            <div class="about__container container grid">
+                <div class="about__data">
+                    <h2 class="section__title about__title">Fitur <i>UpGuard.</i> Forest</h2>
+                    <p class="about__description">Fitur UpGuard. Forest pada perusahaan Upcycle. merupakan fitur yang menggunakan teknologi Artificial Intelligence (AI)
+                    untuk mendeteksi secara dini penebangan hutan secara liar. Fitur ini berguna untuk mengawasi kegiatan illegal logging
+                    dan mencegah kerusakan pada hutan dan ekosistem yang ada di dalamnya. Fitur ini menggunakan pemetaan daerah-daerah yang
+                    rentan: Fitur ini memungkinkan perusahaan Upcycle untuk memetakan daerah-daerah yang rentan terhadap aktivitas illegal
+                    logging. Dengan memetakan daerah-daerah tersebut, perusahaan dapat mengambil tindakan preventif dan memastikan keamanan
+                    hutan dan ekosistem yang ada di dalamnya.
+                </div>
+
+                <div class="about__img">
+                    <div>
+                        <button class="buttonmaps" onclick="location.href='#'" type="submit">Deteksi Lokasi UpGuard.
+                            Forest</button>
+                        <button class="buttonsecondmaps" onclick="location.href='trashLocation.html'" type="submit">Masuk Ke
+                            UpGuard. Bin</button>
+                    </div>
+                </div>
+        </section>
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section" id="about">
+            <div class="about__container container grid">
+                <div class="about__img">
+                    <div class="about__img-overlay">
+                        <img src="assets/img/guardian 1.png" alt="" class="about__img-one">
+                    </div>
+                
+                    <div class="about__img-overlay">
+                        <img src="assets/img/guardian-2.png" alt="" class="about__img-two">
+                    </div>
+                </div>
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">Bagaimana Cara Kerja <i>UpGuard.</i> Forest</h2>
+                    <p class="about__description">UpGuard Forest menggunakan teknologi bernama TensorFlow yang memanfaatkan Google AI. Alat ini mampu merekam seluruh
+                    suara yang ada di hutan, mencakup suara spesies binatang hingga suara gergaji mesin. Kemudian alat tersebut akan
+                    mengirimkannya secara real-time ke database server. Jadi, suara-suara yang terekam tersebut akan dikenali dan dideteksi
+                    secara otomatis. Tentunya UpGuard Forest akan membantu petugas patroli dan masyarakat sekitar untuk memantau keadaan
+                    hutan dan mencegah penebangan liar.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== PEYAKINAN ====================-->
+        <section class="yakin section" id="peyakinan">
+            <div class="yakinbg"></div>
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h1 class="yakin__data-title center">Masih Ragu Untuk Menggunakan <b>Re-Cycler?</b></h1>
+                    <h3 class="yakin__data-subtitle">Dengan fitur Bank Sampah kekinian ini, kamu bisa berkontribusi
+                        dalam
+                        menjaga lingkungan sekaligus mendapatkan manfaat
+                        finansial. Mulailah beraksi untuk masa depan yang lebih baik bersama Re-Cycler!, Yakin masih
+                        Ragu?</h3>
+                    <a href="#" class="button-center">Setor Sampahmu</a>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== SPONSORS ====================-->
+        <section class="sponsor section">
+            <div class="sponsor__container container grid">
+                <div class="sponsor__content">
+                    <img src="assets/img/sponsors1.png" alt="" class="sponsor__img">
+                </div>
+                <div class="sponsor__content">
+                    <img src="assets/img/sponsors2.png" alt="" class="sponsor__img">
+                </div>
+                <div class="sponsor__content">
+                    <img src="assets/img/sponsors3.png" alt="" class="sponsor__img">
+                </div>
+                <img src="assets/img/logo.png" class="footer__img">
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div class="footer__content grid">
+                <div class="footer__data">
+                    <h3 class="footer__title"><i>UpCycle.</i></h3>
+                    <p class="footer__description">Jangan <b>Ragu</b> <br> Mulai <b>Perubahan!</b>
+                    </p>
+                    <div>
+                        <a href="https://www.facebook.com/" target="_blank" class="footer__social">
+                            <i class="ri-facebook-box-fill"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="footer__social">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="footer__social">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="https://www.youtube.com/" target="_blank" class="footer__social">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">About</h3>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="#about" class="footer__link">About</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#discover" class="footer__link"><i>UpCycle.</i> Craft</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#animate" class="footer__link"><i>UpCycle.</i> Animate</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">Company</h3>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="" class="footer__link"><i>UpCycle.</i> Team</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">Become a member</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">Support</h3>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">FAQs</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">Support Center</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__rights">
+                <p class="footer__copy">&#169; 2023 <i>UpCycle. This Page is a submission for <a
+                            href="https://skilvul.com">Skilvul</a> Assignment Project</i></p>
+                <div class="footer__terms">
+                    <a href="#" class="footer__terms-link">Terms & Agreements</a>
+                    <a href="#" class="footer__terms-link">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line scrollup__icon"></i>
+    </a>
+
+    <!--=============== SCROLL REVEAL===============-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
